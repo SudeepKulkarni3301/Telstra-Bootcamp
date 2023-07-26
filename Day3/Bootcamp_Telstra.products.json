@@ -1,0 +1,40 @@
+[{
+  "_id": {
+    "$oid": "64c0baa5d7bd62aeab3e261e"
+  },
+  "name": "Product 1",
+  "price": 10.99,
+  "category": "Electronics"
+},
+{
+  "_id": {
+    "$oid": "64c0baa5d7bd62aeab3e261f"
+  },
+  "name": "Product 2",
+  "price": 24.5,
+  "category": "Clothing"
+},
+{
+  "_id": {
+    "$oid": "64c0baa5d7bd62aeab3e2620"
+  },
+  "name": "Product 3",
+  "price": 5.99,
+  "category": "Books"
+},
+{
+  "_id": {
+    "$oid": "64c0baa5d7bd62aeab3e2621"
+  },
+  "name": "Product 4",
+  "price": 34.75,
+  "category": "Electronics"
+},
+{
+  "_id": {
+    "$oid": "64c0baa5d7bd62aeab3e2622"
+  },
+  "name": "Product 5",
+  "price": 12.99,
+  "category": "Toys"
+}]

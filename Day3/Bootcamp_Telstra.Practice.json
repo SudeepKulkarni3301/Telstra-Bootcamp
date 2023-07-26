@@ -1,0 +1,58 @@
+[{
+  "_id": {
+    "$oid": "64c09c6ff87977e405410a2a"
+  },
+  "name": "sudeep",
+  "department": "data",
+  "age": 22
+},
+{
+  "_id": {
+    "$oid": "64c09d1af87977e405410a2b"
+  },
+  "Phone no": {
+    "$numberLong": "9008356215"
+  },
+  "address": "Bengaluru"
+},
+{
+  "_id": {
+    "$oid": "64c0a1e6f4166e86f748da79"
+  },
+  "dept": "agree",
+  "name": "mahesh"
+},
+{
+  "_id": {
+    "$oid": "64c0a222f4166e86f748da7a"
+  },
+  "name": "akash",
+  "age": 22,
+  "salary": 10000
+},
+{
+  "_id": {
+    "$oid": "64c0a2b3f4166e86f748da7b"
+  },
+  "name": "sankalp",
+  "age": 20,
+  "depat": "EEE"
+},
+{
+  "_id": {
+    "$oid": "64c0a3ccf4166e86f748da7c"
+  },
+  "name": "ramesh",
+  "age": 55,
+  "dept": "factory",
+  "salary": 30000
+},
+{
+  "_id": {
+    "$oid": "64c0a3ccf4166e86f748da7d"
+  },
+  "name": "madhu",
+  "age": 45,
+  "dept": "bank",
+  "salary": 10000
+}]
