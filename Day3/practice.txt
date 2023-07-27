@@ -12,7 +12,7 @@ For mongosh info see: https://docs.mongodb.com/mongodb-shell/
    2023-07-26T09:30:02.485+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
 ------
 
-*/
+
 
 test> show dbs
 Bootcamp_Telstra  112.00 KiB
@@ -331,3 +331,5 @@ Bootcamp_Telstra> db.movies.find()
 Bootcamp_Telstra> db.movies.find({_id:"64c0fbcc38725bcffbbc9b90"})
 
 Bootcamp_Telstra>
+
+*/
