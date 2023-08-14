@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p id="p1">this is para 1</p>
+    <p id="p2">this is para 2</p>
+
+    <button onclick="changeContent()">Click me to change HTML content</button> <br>
+
+    <button onclick="doc()">Click me to write something</button> <br>
+    <button onclick="alertOutput()">Click me to alert</button> <br>
+
+
+    <script>
+
+        function changeContent() 
+        {
+            document.getElementById("p1").innerHTML = "Hello world";
+        }
+
+        function doc() 
+        {
+            document.write('I have written something');
+        }
+        function alertOutput() 
+        {
+            window.alert("You clicked alert button broo");
+        }
+
+    </script>
+
+
+</body>
+
+</html>
