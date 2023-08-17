@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Telecom Service Comparison</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <style>
+        body {
+            background-color: wheat;
+            padding: 20px;
+            margin: 50px;
+        }
+
+        /* Service Plan Cards */
+        .service-plan {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: grey;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .service-plan:hover {
+            transform: scale(1.05);
+        }
+
+        .selected {
+            border: 2px solid #007bff;
+        }
+
+        #comparisonDetails {
+            margin-top: 20px;
+            display: none;
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
+    <div class="container">
+        <h1 class="text-center my-5">Telecom Service Comparison Dashboard</h1>
+        <div class="row">
+            <!-- Service Plan Cards -->
+            <div class="text-center col-md-4">
+                <div class="service-plan" style="align-items: center;">
+                    <h2>Plan A</h2>
+                    <p>Price: $30/month</p>
+                    <p>Data: 5GB</p>
+                    <p>Call Minutes: Unlimited</p>
+                    <p>Text Messages: 1000</p>
+                </div>
+            </div>
+            <div class="text-center col-md-4">
+                <div class="service-plan">
+                    <h2>Plan B</h2>
+                    <p>Price: $40/month</p>
+                    <p>Data: 10GB</p>
+                    <p>Call Minutes: Unlimited</p>
+                    <p>Text Messages: 2000</p>
+                </div>
+            </div>
+            <div class="text-center col-md-4">
+                <div class="service-plan">
+                    <h2>Plan C</h2>
+                    <p>Price: $50/month</p>
+                    <p>Data: 15GB</p>
+                    <p>Call Minutes: Unlimited</p>
+                    <p>Text Messages: Unlimited</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+
+    <div class="text-center">
+        <button id="compareButton" onclick="compare()" type="button" class="btn btn-primary">Compare</button>
+    </div>
+
+    <div class="row" id="comparisonDetails"></div>
+
+    <script>
+        const serviceCards = document.querySelectorAll('.service-plan');
+        const compareButton = document.getElementById('compareButton');
+        const comparisonDetails = document.getElementById('comparisonDetails');
+        const selectedPlans = [];
+
+        serviceCards.forEach(card => {
+            card.addEventListener('click', () => {
+                card.classList.toggle('selected');
+                if (card.classList.contains('selected')) {
+                    selectedPlans.push(card);
+                } else {
+                    const index = selectedPlans.indexOf(card);
+                    if (index > -1) {
+                        selectedPlans.splice(index, 1);
+                    }
+                }
+            });
+        });
+
+        compareButton.addEventListener('click', () => {
+            if (selectedPlans.length < 2) {
+                alert('Please select at least two plans to compare.');
+                return;
+            }
+
+            // Clear existing comparison details
+            comparisonDetails.innerHTML = '';
+
+            // Display selected plans' details for comparison
+            selectedPlans.forEach(card => {
+                const planDetails = card.cloneNode(true);
+                comparisonDetails.appendChild(planDetails);
+            });
+
+            // Show comparison details section
+            comparisonDetails.style.display = 'block';
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
