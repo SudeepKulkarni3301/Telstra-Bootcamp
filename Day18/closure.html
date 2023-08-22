@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        // function outer()
+        // {
+
+        //     let a=1;
+        //     return function inner()
+        //     {
+        //         let b=2;
+
+        //         console.log(a);
+        //         console.log(b);
+
+        //         return a+b;
+        //     }
+        // }
+
+        // let res = outer()
+        // console.log(res());
+
+        function calculateVolume(length) {
+            return function (breadth) {
+                return function (height) {
+                    return length * breadth * height;
+                }
+            }
+        }
+        console.log(calculateVolume(4)(5)(6));
+
+
+    </script>
+</body>
+
+</html>

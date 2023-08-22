@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        let task = true;
+        // let prom = new Promise
+
+        function prom(rtask) {
+
+            return new Promise(function (resolve, reject) {
+                if (task) {
+                    resolve(" The issue resolved ");
+                }
+                else {
+                    reject(" Not resolved ");
+                }
+            });
+
+        }
+
+
+
+        prom(task).then(
+            function displayInfo(msg) {
+                console.log(" Promise successful " + msg)
+            }
+        )
+
+            .catch(
+                function displayError(msg) {
+                    console.log(" Promise fail " + msg)
+                }
+            )
+    </script>
+</body>
+
+</html>
+
+
+<!-- Promise {<fulfilled>: undefined}
+    [[Prototype]]
+    : 
+    Promise
+    [[PromiseState]]
+    : 
+    "fulfilled"
+    [[PromiseResult]]
+    : 
+    undefined -->

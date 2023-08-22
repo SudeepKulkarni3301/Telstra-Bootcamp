@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+       /* let marks = [35, 54, 64, 78];
+        console.log(marks.length)
+
+        for (let i = 0; i < marks.length; i++) {
+            console.log(marks[i])
+        }
+
+        console.log("--------------")
+
+        for (let ma of marks)
+            console.log(ma)
+
+        console.log("--------------")
+
+        let fruits = ["apple","banana","mango"]
+        for(let fr of fruits)
+            console.log(fr)
+        */
+
+
+        function evenodd(...nums)
+        {
+            let odd=0, even=0;
+            for (let nu of nums)
+            {
+                if (nu%2==0)
+                    even++;
+                else
+                    odd++;
+            }
+            console.log("Even is "+even+" odd is "+odd)
+        }
+        //calling function
+        evenodd(1,2,3,4,5,6,7,8,9,10)
+
+
+    </script>
+</body>
+
+</html>
