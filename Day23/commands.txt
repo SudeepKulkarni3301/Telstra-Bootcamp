@@ -1,0 +1,8 @@
+ZooKeeper starter command
+.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+
+kafka-server starter command
+.\bin\windows\kafka-server-start.bat .\config\server.properties
+
+command to create topic
+.\bin\windows\kafka-topics.bat --create --topic test-topic2 --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
